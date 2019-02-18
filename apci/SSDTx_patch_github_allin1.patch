@@ -1,0 +1,229 @@
+# This all in one patch is for Acer E5-571-5552 SSDTx.DSL. It includes:
+# Generic Fixes (Pjalm)
+# DTGP (SourceForge)
+# Rename GFX0 to IGPU (Rehab)
+# Rename B0D3 to HDAU (Rahab)
+# Remove PSS placeholders (Rehab)
+
+#Maintained by: RehabMan for: Laptop Patches
+#graphics_Rename-GFX0.txt
+
+# Note: Most DSDT/SSDTs use GFX0 for the integrated graphics device,
+#  but there are few renegades that use VID or AGP1.
+#  If your DSDT uses VID or AGP1 instead of GFX0, see the 
+#  alternate patch "Rename VID/AGP1 to IGPU"
+
+# sometimes there is already IGPU used for other things
+into_all all code_regex IGPU, replaceall_matched begin IGFX, end;
+
+# rename GFX0 -> IGPU for better power management
+into_all all code_regex GFX0\. replaceall_matched begin IGPU. end;
+into_all all code_regex \.GFX0 replaceall_matched begin .IGPU end;
+into_all all code_regex \sGFX0, replaceall_matched begin IGPU, end;
+into_all all code_regex \(GFX0 replaceall_matched begin (IGPU end;
+into_all all label GFX0 set_label begin IGPU end;
+into_all all label _SB.PCI0.GFX0 set_label begin _SB.PCI0.IGPU end;
+into_all all label \_SB.PCI0.GFX0 set_label begin \_SB.PCI0.IGPU end;
+into_all all label _SB.PCI0.GFX0.DD02 set_label begin _SB.PCI0.IGPU.DD02 end;
+into_all all label \_SB.PCI0.GFX0.DD02 set_label begin \_SB.PCI0.IGPU.DD02 end;
+into_all all label ^^^GFX0 set_label begin ^^^IGPU end;
+into_all all label ^^GFX0 set_label begin ^^IGPU end;
+into_all all label ^GFX0 set_label begin ^IGPU end;
+
+#Maintained by: RehabMan for: Laptop Patches
+#graphics_Rename-B0D3.txt
+
+# for DSDT
+
+into method label _WAK code_regex B0D3 replaceall_matched begin HDAU end;
+into definitionblock code_regex B0D3 replaceall_matched begin HDAU end;
+
+# for GFX0 SSDT
+
+# Note: Change your layout ID if you need something different
+
+# inject "hda-gfx"="onboard-1" into IGPU (GFX0 originally)
+into method label _DSM parent_adr 0x00020000 remove_entry;
+into device name_adr 0x00020000 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+    Return (Package()\n
+    {\n
+        "hda-gfx", Buffer() { "onboard-1" },\n
+    })\n
+}\n
+end;
+
+# inject "hda-gfx"="onboard-1" into HDAU (B0D3 originally)
+into method label _DSM parent_adr 0x00030000 remove_entry;
+into device name_adr 0x00030000 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+    Return (Package()\n
+    {\n
+        "layout-id", Buffer() { 14, 0x00, 0x00, 0x00 },\n
+        "hda-gfx", Buffer() { "onboard-1" },\n
+    })\n
+}\n
+end;
+
+into device label B0D3 set_label begin HDAU end;
+into method label SBCB code_regex B0D3 replaceall_matched begin HDAU end;
+
+#Maintained by: RehabMan for: Laptop Patches
+#fix_PSS.txt
+
+# for one of the CPU SSDTs...
+
+# remove bogus:
+#
+# Package (0x06)
+# {
+#   0x80000000,
+#   0x80000000,
+#   0x80000000,
+#   0x80000000,
+#   0x80000000,
+#   0x80000000
+# }
+
+into_all all code_regex Package\s+\(0x06\)\n.*\{\n(.*0x80000000.*\n){6}.*\} removeall_matched;
+
+#Maintained by: PHPdev32 for: Sourceforge
+into method label DTGP remove_entry;
+into definitionblock code_regex . insert
+begin
+Method (DTGP, 5, NotSerialized)\n
+{\n
+    If (LEqual (Arg0, Buffer (0x10)\n
+            {\n
+                /* 0000 */    0xC6, 0xB7, 0xB5, 0xA0, 0x18, 0x13, 0x1C, 0x44, \n
+                /* 0008 */    0xB0, 0xC9, 0xFE, 0x69, 0x5E, 0xAF, 0x94, 0x9B\n
+            }))\n
+    {\n
+        If (LEqual (Arg1, One))\n
+        {\n
+            If (LEqual (Arg2, Zero))\n
+            {\n
+                Store (Buffer (One)\n
+                    {\n
+                        0x03\n
+                    }, Arg4)\n
+                Return (One)\n
+            }\n
+            If (LEqual (Arg2, One))\n
+            {\n
+                Return (One)\n
+            }\n
+        }\n
+    }\n
+    Store (Buffer (One)\n
+        {\n
+            0x00\n
+        }, Arg4)\n
+    Return (Zero)\n
+}
+end;
+
+# Maintained by: PJALM (help@pjalm.com) for: http://pjalm.com/repos/
+
+# These patches are the registered property of PJALM.COM and can not be
+# redistributed or modified without the written consent of PJALM.COM.
+# Links to these patches are allowed. All material is protected under the DMCA.
+
+# Last Updated  : 05/07/2016
+# Patch Name    : Generic Fixes
+# Patch Version : 1.0
+
+# Intel 9 Series Fixes
+into_all all code_regex _T_([0-6]) replaceall_matched begin T_%1 end;
+
+into_all method label _INI code_regex INIR\n replace_matched begin Store (Zero, INIR)\n end;
+
+into device label PCI0 code_regex (\s+Zero){2,} remove_matched;
+into_all method label ADBG code_regex (?<=Return\s\(MDBG\))\s+Arg0 remove_matched;
+into_all method label _PS3 code_regex PS3X\n replace_matched begin Store (Zero, PS3X)\n end;
+into_all method label _PS2 code_regex PS2X\n replace_matched begin Store (Zero, PS2X)\n end;
+into_all method label _PS0 code_regex PS0X\n replace_matched begin Store (Zero, PS0X)\n end;
+
+into_all method label GPEH insert begin Return (Zero) end;
+
+into method label _CRS parent_label PCI0 code_regex DWordField\s\(BUF0,\s\\_SB.PCI0._Y1E._LEN,\sMSLN\) replace_matched begin QWordField (BUF0, \\_SB.PCI0._Y1E._LEN, MSLN) end;
+
+into_all all code_regex Acquire\s\(MUT0,\s0x0FFF\) replace_matched begin Acquire (MUT0, 0xFFFF) end;
+
+into method label _HID parent_label _SB.PCI0.LPCB.TPM code_regex (Return\s\(Zero\)) remove_matched;
+into method label _HID parent_label _SB.PCI0.LPCB.TPM insert begin Return (Zero) end;
+
+into method label _PS0 parent_label NVM0 code_regex (Return\s\(Zero\)) remove_matched;
+into method label _PS0 parent_label NVM0 insert begin Return (Zero) end;
+
+into method label _PS0 parent_label XHC code_regex (Return\s\(Zero\)) remove_matched;
+into method label _PS0 parent_label XHC insert begin Return (Zero) end;
+
+into method label _PS0 parent_label RHUB code_regex (Return\s\(Zero\)) remove_matched;
+into method label _PS0 parent_label RHUB insert begin Return (Zero) end;
+
+into method label _PS3 parent_label NVM0 code_regex (Return\s\(Zero\)) remove_matched;
+into method label _PS3 parent_label NVM0 insert begin Return (Zero) end;
+
+into method label _PS3 parent_label XHC code_regex (Return\s\(Zero\)) remove_matched;
+into method label _PS3 parent_label XHC insert begin Return (Zero) end;
+
+into method label _DSM parent_label SHUB code_regex (Return\s\(Zero\)) remove_matched;
+into method label _DSM parent_label SHUB insert begin Return (Zero) end;
+
+into method label RDCA parent_label SHUB code_regex (Return\s\(Zero\)) remove_matched;
+into method label RDCA insert begin Return (Zero) end;
+
+into method label CNRS parent_label SHUB code_regex (Return\s\(Zero\)) remove_matched;
+into method label CNRS insert begin Return (Zero) end;
+
+into method label SPL1 parent_label SHUB code_regex (Return\s\(Zero\)) remove_matched;
+into method label SPL1 insert begin Return (Zero) end;
+
+into method label OE1X parent_label _GPE code_regex (Return\s\(Zero\)) remove_matched;
+into method label OE1X parent_label _GPE insert begin Return (Zero) end;
+
+# into method label TINI parent_label _SB.PCI0.RP05 code_regex (Return\s\(Zero\)) remove_matched;
+into method label TINI parent_label _SB.PCI0.RP05 insert begin Return (Zero) end;
+
+into method label TWAK parent_label _SB.PCI0.RP05 code_regex (Return\s\(Zero\)) remove_matched;
+into method label TWAK parent_label _SB.PCI0.RP05 insert begin Return (Zero) end;
+
+into method label TPTS parent_label _SB.PCI0.RP05 code_regex (Return\s\(Zero\)) remove_matched;
+into method label TPTS parent_label _SB.PCI0.RP05 insert begin Return (Zero) end;
+
+into method label SMSR parent_label _SB code_regex CreateDWordField\s\(Arg0,\s0x04,\sAEBX\)\s+ remove_matched;
+into method label SDSP parent_label AMW0 code_regex CreateDWordField\s\(Arg0,\sZero,\sACTN\)\s+ remove_matched;
+into method label GDSP parent_label AMW0 code_regex CreateDWordField\s\(Arg0,\sZero,\sACTN\)\s+ remove_matched;
+into method label DEVS parent_label AMW0 code_regex CreateDWordField\s\(Arg0,\s0x04,\sCPAR\)\s+ remove_matched;
+
+# Device injection for the Intel 9 Series SATA
+into device label SAT0 set_label begin SATA end;
+into_all all code_regex SAT0 replaceall_matched begin SATA end;
+into device label SAT1 remove_entry;
+into_all scope label _SB.PCI0.SAT0.PRT0 set_label begin _SB.PCI0.SATA.PRT0 end;
+into_all scope label _SB.PCI0.SAT0.PRT1 set_label begin _SB.PCI0.SATA.PRT1 end;
+into_all scope label _SB.PCI0.SAT0.PRT2 set_label begin _SB.PCI0.SATA.PRT2 end;
+into_all scope label _SB.PCI0.SAT0.PRT3 set_label begin _SB.PCI0.SATA.PRT3 end;
+into method label _DSM parent_label SATA remove_entry;
+into device label SATA insert begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+	Store (Package (0x0A) {\n
+		"AAPL,slot-name", "Built In",\n
+		"name", "Intel AHCI Controller",\n
+		"model", Buffer (0x2D) {"Intel 9 Series Chipset Family SATA Controller"},\n
+		"device_type", Buffer (0x0F) {"AHCI Controller"},\n
+		"device-id", Buffer (0x04) {0x02,0x1E,0x00,0x00}\n
+	}, Local0)\n
+	DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))\n
+	Return (Local0)\n
+}
+end;
+
