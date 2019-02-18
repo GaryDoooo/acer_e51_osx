@@ -8,11 +8,15 @@ Initial steps could follow the guide in https://github.com/GalaticStryder/Acer-E
 5. Set the UEFI boot in BIOS and disable safe boot (?or something named similar);
 
 Everthing works except for:
+
 Bluetooth, LED backlight 
+
 Hope I can solve those soon. But won't try again in short time.
 
 Note:
-Put some useful documents in the docs, in case their server is down.
-IASL sources settings, if not using the all in one patches:
 
+Put some useful documents in the docs, in case their server is down.
+
+IASL sources settings, if not using the all in one patches:
+![iasl parameters](https://raw.githubusercontent.com/GaryDoooo/acer_e51_osx/master/iasl_sources.png)
 
