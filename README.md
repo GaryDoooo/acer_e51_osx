@@ -10,7 +10,7 @@ Initial steps could follow the guide in https://github.com/GalaticStryder/Acer-E
 
 Everthing works except for:
 
-Bluetooth
+Bluetooth, brightness tuning keys (Fn+left and Fn+right)
 
 Hope I can solve those soon. But won't try again in short time.
 
