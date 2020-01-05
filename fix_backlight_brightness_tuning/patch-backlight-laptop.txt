@@ -1,0 +1,38 @@
+### Installing Xcode command line tools:
+
+git
+
+### Making a directory to deal with patching process:
+
+mkdir ~/Projects
+cd ~/Projects
+
+### Cloning RehabMan’s ProBook repo:
+
+cd ~/Projects
+git clone https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch probook.git
+
+### Cloning RehabMan’s Clover Laptop config repo:
+
+cd ~/Projects
+git clone https://github.com/RehabMan/OS-X-Clover-Laptop-Config.git guide.git
+
+### Downloading and Installing iasl compiler:
+
+cd ~/Downloads
+curl --remote-name --progress-bar --location https://bitbucket.org/RehabMan/acpica/downloads/iasl.zip
+unzip iasl.zip
+sudo cp iasl /usr/bin
+
+### Building patch files:
+
+cd ~/Projects/guide.git
+make
+
+### Installing patch backlight kext
+
+sudo cp -R ~/Projects/probook.git/kexts/AppleBacklightInjector.kext /Library/Extensions
+
+### Rebuilding cache:
+
+sudo kextcache -i /
