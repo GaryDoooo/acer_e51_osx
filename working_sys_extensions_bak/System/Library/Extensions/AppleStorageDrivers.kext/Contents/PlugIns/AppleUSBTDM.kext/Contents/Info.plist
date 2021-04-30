@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>15A284</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>AppleUSBTDM</string>
+	<key>CFBundleGetInfoString</key>
+	<string>404.50.6, Copyright Apple Inc. 2014-2016</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.driver.AppleUSBTDM</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AppleUSBTDM</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>404.50.6</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>404.50.6</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>8V109d</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>16G18</string>
+	<key>DTSDKName</key>
+	<string>macosx10.12internal</string>
+	<key>DTXcode</key>
+	<string>0830</string>
+	<key>DTXcodeBuild</key>
+	<string>8V109d</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AppleUSBTDMControlLUN</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBTDM</string>
+			<key>IOClass</key>
+			<string>AppleUSBTDMControlLUN</string>
+			<key>IOProviderClass</key>
+			<string>IOSCSIPeripheralDeviceNub</string>
+			<key>Peripheral Device Type</key>
+			<integer>31</integer>
+			<key>Physical Interconnect</key>
+			<string>USB</string>
+			<key>Physical Interconnect Location</key>
+			<string>External</string>
+			<key>Product Identification</key>
+			<string>Target Disk CTLR</string>
+			<key>Vendor Identification</key>
+			<string>APPLE</string>
+		</dict>
+		<key>AppleUSBTDMMassStorage_Mk1</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBTDM</string>
+			<key>Force Write Cache Enable</key>
+			<true/>
+			<key>IOClass</key>
+			<string>AppleUSBTDMMassStorageClass</string>
+			<key>IOMediaIcon</key>
+			<dict>
+				<key>CFBundleIdentifier</key>
+				<string>com.apple.iokit.IOSCSIArchitectureModelFamily</string>
+				<key>IOBundleResourceFile</key>
+				<string>USBHD.icns</string>
+			</dict>
+			<key>IOProviderClass</key>
+			<string>IOUSBMassStorageDriverNub</string>
+			<key>Physical Interconnect</key>
+			<string>USB</string>
+			<key>Physical Interconnect Location</key>
+			<string>External</string>
+			<key>Read Time Out Duration</key>
+			<integer>30000</integer>
+			<key>SCSI Device Characteristics</key>
+			<dict>
+				<key>IOMaximumByteCountRead</key>
+				<integer>1048576</integer>
+				<key>IOMaximumByteCountWrite</key>
+				<integer>1048576</integer>
+			</dict>
+			<key>USB Mass Storage Characteristics</key>
+			<dict>
+				<key>Max Logical Unit Number</key>
+				<integer>0</integer>
+				<key>Preferred Protocol</key>
+				<integer>80</integer>
+				<key>Preferred Subclass</key>
+				<integer>6</integer>
+				<key>Use Standard USB Reset</key>
+				<string>true</string>
+			</dict>
+			<key>Write Time Out Duration</key>
+			<integer>30000</integer>
+			<key>bConfigurationValue</key>
+			<integer>1</integer>
+			<key>bInterfaceNumber</key>
+			<integer>0</integer>
+			<key>idProduct</key>
+			<integer>6144</integer>
+			<key>idVendor</key>
+			<integer>1452</integer>
+		</dict>
+		<key>AppleUSBTDMType00_Mk1</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBTDM</string>
+			<key>IOClass</key>
+			<string>AppleUSBTDMType00</string>
+			<key>IOProviderClass</key>
+			<string>IOSCSILogicalUnitNub</string>
+			<key>Peripheral Device Type</key>
+			<integer>0</integer>
+			<key>Physical Interconnect</key>
+			<string>USB</string>
+			<key>Physical Interconnect Location</key>
+			<string>External</string>
+			<key>Product Identification</key>
+			<string>Target Disk Mode</string>
+			<key>Vendor Identification</key>
+			<string>APPLE</string>
+		</dict>
+		<key>IOUSBMassStorageDriverNub_TDM_Personality</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.IOUSBMassStorageDriver</string>
+			<key>IOClass</key>
+			<string>IOUSBMassStorageDriverNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBMassStorageInterfaceNub</string>
+			<key>Physical Interconnect</key>
+			<string>USB</string>
+			<key>Physical Interconnect Location</key>
+			<string>External</string>
+			<key>USB Storage Characteristics</key>
+			<dict>
+				<key>bInterfaceProtocol</key>
+				<integer>80</integer>
+			</dict>
+			<key>bConfigurationValue</key>
+			<integer>1</integer>
+			<key>bInterfaceNumber</key>
+			<integer>0</integer>
+			<key>idProduct</key>
+			<integer>6144</integer>
+			<key>idVendor</key>
+			<integer>1452</integer>
+		</dict>
+		<key>IOUSBMassStorageInterfaceNub_TDM_Personality</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.IOUSBMassStorageDriver</string>
+			<key>IOClass</key>
+			<string>IOUSBMassStorageInterfaceNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostInterface</string>
+			<key>Physical Interconnect</key>
+			<string>USB</string>
+			<key>Physical Interconnect Location</key>
+			<string>External</string>
+			<key>bConfigurationValue</key>
+			<integer>1</integer>
+			<key>bInterfaceNumber</key>
+			<integer>0</integer>
+			<key>idProduct</key>
+			<integer>6144</integer>
+			<key>idVendor</key>
+			<integer>1452</integer>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.driver.AppleMobileFileIntegrity</key>
+		<string>1.0.1</string>
+		<key>com.apple.iokit.IOSCSIArchitectureModelFamily</key>
+		<string>2.1.0</string>
+		<key>com.apple.iokit.IOSCSIBlockCommandsDevice</key>
+		<string>2.1.0</string>
+		<key>com.apple.iokit.IOStorageFamily</key>
+		<string>1.5.6</string>
+		<key>com.apple.iokit.IOUSBHostFamily</key>
+		<string>1.0.1</string>
+		<key>com.apple.iokit.IOUSBMassStorageDriver</key>
+		<string>1.0.0</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>9.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Local-Root</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildVersion</key>
+	<string>6091</string>
+	<key>CFBundleShortVersionString</key>
+	<string>403</string>
+	<key>CFBundleVersion</key>
+	<string>403</string>
+	<key>ProjectName</key>
+	<string>AppleHWRaidDriver</string>
+	<key>SourceVersion</key>
+	<string>403000000000000</string>
+</dict>
+</plist>

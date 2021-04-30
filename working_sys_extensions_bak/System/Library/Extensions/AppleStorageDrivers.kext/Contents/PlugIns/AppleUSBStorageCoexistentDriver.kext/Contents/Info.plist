@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>15A284</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>AppleUSBStorageCoexistentDriver</string>
+	<key>CFBundleGetInfoString</key>
+	<string>404.50.6, Copyright Apple Inc. 2015-2016</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.driver.AppleUSBStorageCoexistentDriver</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AppleUSBStorageCoexistentDriver</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>404.50.6</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>404.50.6</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>8V109d</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>16G18</string>
+	<key>DTSDKName</key>
+	<string>macosx10.12internal</string>
+	<key>DTXcode</key>
+	<string>0830</string>
+	<key>DTXcodeBuild</key>
+	<string>8V109d</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>Leap_Frog</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBStorageCoexistentDriver</string>
+			<key>IOClass</key>
+			<string>com_apple_driver_AppleUSBStorageCoexistentDriver</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBMassStorageDriverNub</string>
+			<key>Physical Interconnect</key>
+			<string>USB</string>
+			<key>Physical Interconnect Location</key>
+			<string>Internal</string>
+			<key>idProduct</key>
+			<string>*</string>
+			<key>idVendor</key>
+			<integer>3939</integer>
+		</dict>
+		<key>WD</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBStorageCoexistentDriver</string>
+			<key>IOClass</key>
+			<string>com_apple_driver_AppleUSBStorageCoexistentDriver</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBMassStorageDriverNub</string>
+			<key>Physical Interconnect</key>
+			<string>USB</string>
+			<key>Physical Interconnect Location</key>
+			<string>Internal</string>
+			<key>idProduct</key>
+			<string>*</string>
+			<key>idProductHigh</key>
+			<integer>9727</integer>
+			<key>idProductLow</key>
+			<integer>1792</integer>
+			<key>idProductRange</key>
+			<true/>
+			<key>idVendor</key>
+			<integer>4184</integer>
+		</dict>
+		<key>iPod</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBStorageCoexistentDriver</string>
+			<key>IOClass</key>
+			<string>com_apple_driver_AppleUSBStorageCoexistentDriver</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBMassStorageDriverNub</string>
+			<key>Physical Interconnect</key>
+			<string>USB</string>
+			<key>Physical Interconnect Location</key>
+			<string>Internal</string>
+			<key>idProduct</key>
+			<string>*</string>
+			<key>idProductHigh</key>
+			<integer>4735</integer>
+			<key>idProductLow</key>
+			<integer>4609</integer>
+			<key>idProductRange</key>
+			<true/>
+			<key>idVendor</key>
+			<integer>1452</integer>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOSCSIArchitectureModelFamily</key>
+		<string>2.1.0</string>
+		<key>com.apple.iokit.IOSCSIBlockCommandsDevice</key>
+		<string>2.1.0</string>
+		<key>com.apple.iokit.IOStorageFamily</key>
+		<string>1.5.6</string>
+		<key>com.apple.iokit.IOUSBHostFamily</key>
+		<string>1.0.1</string>
+		<key>com.apple.iokit.IOUSBMassStorageClass</key>
+		<string>1.0.0</string>
+		<key>com.apple.iokit.IOUSBMassStorageDriver</key>
+		<string>1.0.0</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>9.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Local-Root</string>
+</dict>
+</plist>

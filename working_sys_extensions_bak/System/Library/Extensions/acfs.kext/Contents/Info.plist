@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>acfs</string>
+	<key>CFBundleGetInfoString</key>
+	<string>589 (5.3.1), Copyright © 2005-2012 Apple Inc. All rights reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.filesystems.acfs</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>acfs</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>589</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>589</string>
+	<key>OSBundleCompatibleVersion</key>
+	<string>589</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOStorageFamily</key>
+		<string>2.0</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>16.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>16.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>16.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>16.0.0</string>
+		<key>com.apple.kpi.private</key>
+		<string>16.0.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>16.0.0</string>
+	</dict>
+</dict>
+</plist>

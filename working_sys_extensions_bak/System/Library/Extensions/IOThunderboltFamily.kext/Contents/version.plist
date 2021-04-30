@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildAliasOf</key>
+	<string>IOThunderboltFamily</string>
+	<key>BuildVersion</key>
+	<string>805</string>
+	<key>CFBundleShortVersionString</key>
+	<string>6.5.7</string>
+	<key>CFBundleVersion</key>
+	<string>6.5.7</string>
+	<key>ProjectName</key>
+	<string>IOThunderboltFamily_kexts</string>
+	<key>SourceVersion</key>
+	<string>657000000000000</string>
+</dict>
+</plist>

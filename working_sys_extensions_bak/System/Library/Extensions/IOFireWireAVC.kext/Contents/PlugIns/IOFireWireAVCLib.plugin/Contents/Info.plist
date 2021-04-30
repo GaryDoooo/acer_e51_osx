@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>15A284</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>IOFireWireAVCLib</string>
+	<key>CFBundleGetInfoString</key>
+	<string>IOFireWireAVC version 4.2.5, Copyright © 2011-2017 Apple Inc. All rights reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.IOFireWireAVCLib</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>IOFireWireAVCLib</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>4.2.5</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>4.2.5</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>3F4057BC-D479-11D5-9F05-0003934B81A0</key>
+		<string>IOFireWireAVCLibUnitFactory</string>
+		<key>8E9AD5AC-D55E-11D5-B7D2-0003934B81A0</key>
+		<string>IOFireWireAVCLibProtocolFactory</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>6AAF2EF7-D476-11D5-B57C-0003934B81A0</key>
+		<array>
+			<string>3F4057BC-D479-11D5-9F05-0003934B81A0</string>
+		</array>
+		<key>B54BC8F8-D53B-11D5-A1A1-0003934B81A0</key>
+		<array>
+			<string>8E9AD5AC-D55E-11D5-B7D2-0003934B81A0</string>
+		</array>
+	</dict>
+	<key>CFPluginDynamicRegistration</key>
+	<string>NO</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>8V109d</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>16F53</string>
+	<key>DTSDKName</key>
+	<string>macosx10.12internal</string>
+	<key>DTXcode</key>
+	<string>0830</string>
+	<key>DTXcodeBuild</key>
+	<string>8V109d</string>
+</dict>
+</plist>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>14194594</key>
+	<dict>
+		<key>Application</key>
+		<string>Norton Internet Security Firewall Plugin</string>
+		<key>Delete</key>
+		<array>
+			<string>/Library/Application Support/Symantec/Daemon/SymDaemon.bundle/Contents/PlugIns/SymFirewall.bundle/Contents/Resources/SymFirewall.kext</string>
+		</array>
+		<key>Matches</key>
+		<array>
+			<string>com.symantec.kext.fw\(5.[0-2][A-Za-z0-9]+\)</string>
+			<string>panic\(cpu [0-9]+ caller [A-Za-z0-9]+\): assertion failed: len >= 0, file: [A-Za-z0-9\/.-]+bsd/netinet/cpu_in_cksum.c</string>
+		</array>
+	</dict>
+	<key>14437355</key>
+	<dict>
+		<key>Application</key>
+		<string>Norton Internet Security Firewall Plugin</string>
+		<key>Delete</key>
+		<array>
+			<string>/Library/Application Support/Symantec/Daemon/SymDaemon.bundle/Contents/PlugIns/SymFirewall.bundle/Contents/Resources/SymFirewall.kext</string>
+		</array>
+		<key>Matches</key>
+		<array>
+			<string>com.symantec.kext.fw\(5.[0-2][A-Za-z0-9]+\)</string>
+			<string>panic\(cpu [0-9]+ caller [A-Za-z0-9]+\): \"m_sum16: mbuf len \([0-9]+\) &lt; off\+len \([0-9]+\+[0-9]+\)\\n\"@[A-Za-z0-9\/.-]+bsd\/kern\/uipc_mbuf2.c</string>
+		</array>
+	</dict>
+	<key>14367720</key>
+	<dict>
+		<key>Application</key>
+		<string>Razer Device Driver</string>
+		<key>Matches</key>
+		<array>
+			<string>com.razer.common.razerhid\(6.25\)</string>
+			<string>panic\(cpu [0-9]+ caller [A-Za-z0-9]+\): \"Double fault at [A-Za-z0-9\/.:, \\ \"]+@[A-Za-z0-9\/.-]+osfmk\/i386\/trap_native.c</string>
+		</array>
+		<key>Delete</key>
+		<array>
+			<string>/System/Library/Extensions/RazerHid.kext</string>
+		</array>
+	</dict>
+	<key>14195108</key>
+	<dict>
+		<key>Application</key>
+		<string>MediaTek RT2870 USB Wireless Driver</string>
+		<key>Matches</key>
+		<array>
+			<string>com.Ralink.driver.RT2870USBWirelessDriver\(4.[1-2].[0-9]\)</string>
+			<string>panic\(cpu [0-9]+ caller [A-Za-z0-9]+\): Kernel trap at [A-Za-z0-9]+, type 14=page fault</string>
+			<string>OSArray::flushCollection\(\)</string>
+		</array>
+		<key>Delete</key>
+		<array>
+			<string>/System/Library/Extensions/RT2870USBWirelessDriver.kext</string>
+		</array>
+	</dict>
+	<key>15335625</key>
+	<dict>
+		<key>Application</key>
+		<string>Tuxler</string>
+		<key>Article</key>
+		<string>https://support.apple.com/kb/TS4645?viewlocale=%@</string>
+		<key>Matches</key>
+		<array>
+			<string>com.osxkernel.tuxlerext\(1.0\)</string>
+			<string>panic\(cpu [0-9]+ caller [A-Za-z0-9]+\): Kernel trap at [A-Za-z0-9]+, type 14=page fault</string>
+			<string>Fault CR2: 0x0000000000000ff0</string>
+		</array>
+		<key>Delete</key>
+		<array>
+			<string>/System/Library/Extensions/tuxlerext.kext</string>
+			<string>/System/Library/ExtensionTuxler/tuxlerext.kext</string>
+			<string>/Library/LaunchAgents/com.apple.tuxler.plist</string>
+			<string>/Library/LaunchDaemons/com.apple.tuxlerext.plist</string>
+			<string>/Applications/Tuxler.app</string>
+		</array>
+	</dict>
+	<key>15481675</key>
+	<dict>
+		<key>Application</key>
+		<string>Sophos Anti-Virus on-access scanner</string>
+		<key>Article</key>
+		<string>https://support.apple.com/kb/TS4646?viewlocale=%@</string>
+		<key>Matches</key>
+		<array>
+			<string>com.sophos.kext.sav\([8-9].[0-1].[A-Za-z0-9]+\)</string>
+			<string>panic\(cpu [0-9]+ caller [A-Za-z0-9]+\): \"vnode_rele_ext: vp [A-Za-z0-9]+ usecount -ve : -1.</string>
+		</array>
+		<key>Delete</key>
+		<array>
+			<string>/Library/Sophos Anti-Virus/InterCheck.app/Contents/Resources/Sophos Anti-Virus.kext</string>
+			<string>/Library/Extensions/SophosOnAccessInterceptor.kext</string>
+		</array>
+	</dict>
+	<key>19427578</key>
+	<dict>
+		<key>Application</key>
+		<string>Sophos Anti-Virus on-access scanner</string>
+		<key>Article</key>
+		<string>https://support.apple.com/kb/HT206888</string>
+		<key>Matches</key>
+		<array>
+			<string>com.sophos.kext.sav\(9.[0-2].[A-Za-z0-9]+\)</string>
+			<string>panic\(cpu [0-9]+ caller [A-Za-z0-9]+\): \"vnode_rele_ext: vp [A-Za-z0-9]+ usecount -ve : -1.</string>
+		</array>
+		<key>Delete</key>
+		<array>
+			<string>/Library/Sophos Anti-Virus/InterCheck.app/Contents/Resources/Sophos Anti-Virus.kext</string>
+			<string>/Library/Extensions/SophosOnAccessInterceptor.kext</string>
+		</array>
+	</dict>
+	<key>16632177</key>
+	<dict>
+		<key>Application</key>
+		<string>Yamaha Steinberg USB Driver</string>
+		<key>Article</key>
+		<string>https://support.apple.com/kb/HT206889</string>
+		<key>Matches</key>
+		<array>
+			<string>jp.co.yamaha.driver.YamahaSteinbergUSBAudio\(1\.9\.([0-8][0-9]|9[0-2])\)</string>
+			<string>panic\(cpu [0-9]+ caller [A-Za-z0-9]+\): \"Element [A-Za-z0-9]+ from zone [A-Za-z0-9.]+ caught being freed to wrong zone</string>
+		</array>
+		<key>Delete</key>
+		<array>
+			<string>/Library/Extensions/YamahaSteinbergUSBAudio.kext</string>
+		</array>
+	</dict>
+</dict>
+</plist>

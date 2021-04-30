@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>15A284</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>CoreStorage 1.0, Copyright © 2010 Apple Inc.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.filesystems.st.CoreStorage</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>CFBundleName</key>
+	<string>CoreStorage</string>
+	<key>CFBundlePackageType</key>
+	<string>fs  </string>
+	<key>CFBundleShortVersionString</key>
+	<string>540.30.1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>540.30.1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>8V109d</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>16G18</string>
+	<key>DTSDKName</key>
+	<string>macosx10.12internal</string>
+	<key>DTXcode</key>
+	<string>0830</string>
+	<key>DTXcodeBuild</key>
+	<string>8V109d</string>
+	<key>STMediaTypes</key>
+	<dict>
+		<key>CoreStorage</key>
+		<array>
+			<dict>
+				<key>Content Hint</key>
+				<string>53746F72-6167-11AA-AA11-00306543ECAC</string>
+			</dict>
+		</array>
+	</dict>
+	<key>STPersonalities</key>
+	<dict>
+		<key>CoreStorage</key>
+		<dict>
+			<key>STName</key>
+			<string>Apple Core Storage</string>
+			<key>STRepairArguments</key>
+			<string>-y -x --lv</string>
+			<key>STRepairExecutable</key>
+			<string>../../../../../../../../sbin/fsck_cs</string>
+			<key>STVerificationArguments</key>
+			<string>-n -x --lv</string>
+			<key>STVerificationExecutable</key>
+			<string>../../../../../../../../sbin/fsck_cs</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

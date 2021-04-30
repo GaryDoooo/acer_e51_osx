@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildVersion</key>
+	<string>498</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.13</string>
+	<key>CFBundleVersion</key>
+	<string>3.13</string>
+	<key>ProjectName</key>
+	<string>ntfs</string>
+	<key>SourceVersion</key>
+	<string>91050002000000</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildVersion</key>
+	<string>4438</string>
+	<key>CFBundleShortVersionString</key>
+	<string>36</string>
+	<key>CFBundleVersion</key>
+	<string>36</string>
+	<key>ProjectName</key>
+	<string>AppleBluetoothRemote</string>
+	<key>SourceVersion</key>
+	<string>36000000000000</string>
+</dict>
+</plist>

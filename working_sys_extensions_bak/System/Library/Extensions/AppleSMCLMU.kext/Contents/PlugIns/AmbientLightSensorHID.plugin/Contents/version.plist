@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildAliasOf</key>
+	<string>BezelServices</string>
+	<key>BuildVersion</key>
+	<string>1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>274.3</string>
+	<key>CFBundleVersion</key>
+	<string>274.3</string>
+	<key>ProjectName</key>
+	<string>BezelServices_bundles</string>
+	<key>SourceVersion</key>
+	<string>274003000000000</string>
+</dict>
+</plist>
