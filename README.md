@@ -8,9 +8,7 @@ Initial steps could follow the guide in https://github.com/GalaticStryder/Acer-E
 4. Copy the EFI to EFI partition; Copy the DSDT and SSDTx AML files to APCI/patched/;
 5. Set the UEFI boot in BIOS and disable safe boot (?or something named similar);
 
-Everthing works except for:
-
-Bluetooth, brightness tuning keys (Fn+left and Fn+right)
+Everthing works except for Bluetooth 
 
 Hope I can solve those soon. But won't try again in short time.
 
