@@ -8,11 +8,13 @@ Initial steps could follow the guide in https://github.com/GalaticStryder/Acer-E
 4. Copy the EFI to EFI partition; Copy the DSDT and SSDTx AML files to APCI/patched/;
 5. Set the UEFI boot in BIOS and disable safe boot (?or something named similar);
 
-Everthing works except for Bluetooth. I switched my wireless card to ac7260, so won't try the original bluetooth anymore.
+### Everthing works except for Bluetooth. I changed my wireless card to ac7260, so won't try the original bluetooth anymore.
 
-Use EFI in EFI_updated...backlight_works
-L/E and S/L/E backup in working_sys...
-Then apply the brightness key patch 
+## Install
+1. Install a Serria hackintosh as long as it boots
+1. Use EFI in EFI_updated...backlight_works
+1. L/E and S/L/E backup in working_sys...
+1. Then apply the brightness key patch 
 
 Note:
 
