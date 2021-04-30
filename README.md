@@ -12,6 +12,10 @@ Everthing works except for Bluetooth
 
 Hope I can solve those soon. But won't try again in short time.
 
+Use EFI in EFI_updated...backlight_works
+L/E and S/L/E backup in working_sys...
+Then apply the brightness key patch 
+
 Note:
 
 Put some useful documents in the docs, in case their server is down.
