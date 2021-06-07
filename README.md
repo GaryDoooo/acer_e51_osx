@@ -12,7 +12,8 @@ Hardware:
 
 Almost everything works, including the hardware listed above, sleep, volume and brightness adjustment keys, except for:
 * Sound through HDMI (video works)
-* hibernation (sleep works)
+* hibernation 
+* Sleep only works when closing lid. 
 
 The installation uses OC 069. There is no tweaks to the Mac OS system files. Copy the `everything works EFI` to the EFI partition. OC should handle everything. 
 
