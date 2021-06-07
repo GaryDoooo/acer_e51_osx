@@ -1,26 +1,24 @@
-# Serria hackintosh for Acer E 15 (E5-571-5552)
+# Big Sur 11.4 hackintosh for Acer E 15 (E5-571-5552)
 
-Initial steps could follow the guide in https://github.com/GalaticStryder/Acer-E5-571-Hackintosh
+Hardware:
+* Intel Haswell i5-4210U
+* HD4400
+* Sata SSD
+* ALC283 Audio card
+* Realtek RTL8111 Ethernet card
+* Realtek RTL8411B Card Reader
+* WIFI and Bluetooth AC7260 (I upgraded WIFI card)
+* Webcam USB internal
 
-1. Follow the guide until extracted the DSL files from the bios; (the dsdt files were extracted under Linux.)
-2. Use the all in one patch files to patch all the DSDT and SSDTx files in DSL format, and save to AML forma; or use the patched dir; or find the individual patches listed in the beginning of the all in one patches;
-3. Install the kext files to OSX
-4. Copy the EFI to EFI partition; Copy the DSDT and SSDTx AML files to APCI/patched/;
-5. Set the UEFI boot in BIOS and disable safe boot (?or something named similar);
+Almost everything works, including the hardware listed above, sleep, volume and brightness adjustment keys, except for:
+* Sound through HDMI (video works)
+* hibernation (sleep works)
 
-### Everthing works except for Bluetooth. I changed my wireless card to ac7260, so won't try the original bluetooth anymore.
+The installation uses OC 069. There is no tweaks to the Mac OS system files. Copy the `everything works EFI` to the EFI partition. OC should handle everything. 
 
-## Install
-1. Install a Serria hackintosh as long as it boots
-1. Use EFI in EFI_updated...backlight_works
-1. L/E and S/L/E backup in working_sys...
-1. Then apply the brightness key patch 
+### Troubleshooting
+* To display the boot selection menu, change the OC/config.plist `ShowPicker` to true.
+* My headphone volume is low, adjust the audio settings in `Audio MIDI Setup` like what the `enable headphone sound` image shows.
+* Sleep need some setting in the sytem. Follow the `fix sleep` in `guideliens` dir.
 
-Note:
-
-Put some useful documents in the docs, in case their server is down.
-
-IASL sources settings, if not using the all in one patches:
-![iasl parameters](https://raw.githubusercontent.com/GaryDoooo/acer_e51_osx/master/iasl_sources.png)
-
-To fix the LED backlight, follow the video instruction in the fix backlight folder. The requied files are in the folder too.
+GLHF
