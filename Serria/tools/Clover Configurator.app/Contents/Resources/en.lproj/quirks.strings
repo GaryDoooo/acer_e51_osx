@@ -1,9 +1,9 @@
 
+/* Class = "NSTextFieldCell"; title = "ResizeAppleGpuBars"; ObjectID = "0Zh-xs-Bqy"; */
+"0Zh-xs-Bqy.title" = "ResizeAppleGpuBars";
+
 /* Class = "NSButtonCell"; title = "SyncRuntimePermissions"; ObjectID = "1MM-hq-HB3"; */
 "1MM-hq-HB3.title" = "SyncRuntimePermissions";
-
-/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.4\nDescription: Disables primary checksum (0x58-0x59) writing in AppleRTC.\n\nNote 1: This option will not protect other areas from being overwritten, see RTCMemoryFixup kernel extension if this is desired.\n\nNote 2: This option will not protect areas from being overwritten at firmware stage (e.g. macOS bootloader), see AppleRtcRam protocol description if this is desired."; ObjectID = "1fz-2E-QvW"; */
-"1fz-2E-QvW.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.4\nDescription: Disables primary checksum (0x58-0x59) writing in AppleRTC.\n\nNote 1: This option will not protect other areas from being overwritten, see RTCMemoryFixup kernel extension if this is desired.\n\nNote 2: This option will not protect areas from being overwritten at firmware stage (e.g. macOS bootloader), see AppleRtcRam protocol description if this is desired.";
 
 /* Class = "NSButtonCell"; title = "XhciPortLimit"; ObjectID = "24X-1N-KQI"; */
 "24X-1N-KQI.title" = "XhciPortLimit";
@@ -26,9 +26,6 @@
 /* Class = "NSButtonCell"; title = "DisableLinkeditJettison"; ObjectID = "7y7-H3-bM3"; */
 "7y7-H3-bM3.title" = "DisableLinkeditJettison";
 
-/* Class = "NSButtonCell"; title = "ProvideConsoleGopEnable"; ObjectID = "87W-gf-A7d"; */
-"87W-gf-A7d.title" = "ProvideConsoleGopEnable";
-
 /* Class = "NSButtonCell"; title = "ForceExitBootServices"; ObjectID = "8ky-iq-XRF"; */
 "8ky-iq-XRF.title" = "ForceExitBootServices";
 
@@ -47,6 +44,12 @@
 /* Class = "NSButtonCell"; title = "IncreasePciBarSize"; ObjectID = "Cap-os-5di"; */
 "Cap-os-5di.title" = "IncreasePciBarSize";
 
+/* Class = "NSButtonCell"; title = "ForceOcWriteFlash"; ObjectID = "Ctp-CM-UwU"; */
+"Ctp-CM-UwU.title" = "ForceOcWriteFlash";
+
+/* Class = "NSTabViewItem"; label = "Kernel"; ObjectID = "Dlw-tT-TMc"; */
+"Dlw-tT-TMc.label" = "Kernel";
+
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nRequirement: 10.15 (not required for older)\nDescription: Disables kernel panic on setPowerState timeout.\nAn additional security measure was added to macOS Catalina (10.15) causing kernel panic on power change timeout for Apple drivers. Sometimes it may cause issues on misconfigured hardware, notably digital audio, which sometimes fails to wake up. For debug kernels setpowerstate_panic=0 boot argument should be used, which is otherwise equivalent to this quirk."; ObjectID = "Dud-nf-a9u"; */
 "Dud-nf-a9u.ibShadowedToolTip" = "Default Value: True\nRequirement: 10.15 (not required for older)\nDescription: Disables kernel panic on setPowerState timeout.\nAn additional security measure was added to macOS Catalina (10.15) causing kernel panic on power change timeout for Apple drivers. Sometimes it may cause issues on misconfigured hardware, notably digital audio, which sometimes fails to wake up. For debug kernels setpowerstate_panic=0 boot argument should be used, which is otherwise equivalent to this quirk.";
 
@@ -59,11 +62,14 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Force macOS to use a pseudorandom value among available slide values."; ObjectID = "FQL-vw-xmL"; */
 "FQL-vw-xmL.ibShadowedToolTip" = "Default Value: True\nDescription: Force macOS to use a pseudorandom value among available slide values.";
 
-/* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Install Graphics Output Protocol if missing from the console handle."; ObjectID = "G37-Vn-z58"; */
-"G37-Vn-z58.ibShadowedToolTip" = "Default Value: True\nDescription: Install Graphics Output Protocol if missing from the console handle.";
-
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nRequirement: 10.8 (not required for older)\nDescription: Disables IOMapper support in XNU (VT-d), which may conflict with the firmware implementation.\nNote: This option is a preferred alternative to dropping DMAR ACPI table and disabling VT-d in firmware preferences, which does not break VT-d support in other systems in case they need it."; ObjectID = "GEn-8P-60k"; */
 "GEn-8P-60k.ibShadowedToolTip" = "Default Value: True\nRequirement: 10.8 (not required for older)\nDescription: Disables IOMapper support in XNU (VT-d), which may conflict with the firmware implementation.\nNote: This option is a preferred alternative to dropping DMAR ACPI table and disabling VT-d in firmware preferences, which does not break VT-d support in other systems in case they need it.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.8 (10.14)\nDescription: Provides current CPU info to the kernel.\n\nThis quirk works differently depending on the CPU:\n• For Microsoft Hyper-V it provides the correct TSC and FSB values to the kernel, as well as disables CPU topology validation (10.8+).\n• For KVM and other hypervisors it provides precomputed MSR 35h values solving kernel panic with -cpu host.\n• For Intel CPUs it adds support for asymmetrical SMP systems (e.g. Intel Alder Lake) by patching core count to thread count along with the supplemental required changes (10.14+)."; ObjectID = "GIS-Ow-Rrd"; */
+"GIS-Ow-Rrd.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.8 (10.14)\nDescription: Provides current CPU info to the kernel.\n\nThis quirk works differently depending on the CPU:\n• For Microsoft Hyper-V it provides the correct TSC and FSB values to the kernel, as well as disables CPU topology validation (10.8+).\n• For KVM and other hypervisors it provides precomputed MSR 35h values solving kernel panic with -cpu host.\n• For Intel CPUs it adds support for asymmetrical SMP systems (e.g. Intel Alder Lake) by patching core count to thread count along with the supplemental required changes (10.14+).";
+
+/* Class = "NSTabViewItem"; label = "Booter"; ObjectID = "Jzn-eI-GGZ"; */
+"Jzn-eI-GGZ.label" = "Booter";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.10\nDescription: Increases 32-bit PCI bar size in IOPCIFamily from 1 to 4 GBs.\nNote: This option should be avoided whenever possible. In general the necessity of this option means misconfigured or broken firmware."; ObjectID = "N1z-8X-VF9"; */
 "N1z-8X-VF9.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.10\nDescription: Increases 32-bit PCI bar size in IOPCIFamily from 1 to 4 GBs.\nNote: This option should be avoided whenever possible. In general the necessity of this option means misconfigured or broken firmware.";
@@ -83,11 +89,17 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Update memory permissions for runtime environment."; ObjectID = "QJ9-va-jTP"; */
 "QJ9-va-jTP.ibShadowedToolTip" = "Default Value: True\nDescription: Update memory permissions for runtime environment.";
 
+/* Class = "NSTextFieldCell"; title = "Scheme"; ObjectID = "RCW-mQ-WGW"; */
+"RCW-mQ-WGW.title" = "Scheme";
+
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nDescription: Permits write access to UEFI runtime services code. Use RebuildAppleMemoryMap if possible."; ObjectID = "RSJ-3x-2PK"; */
 "RSJ-3x-2PK.ibShadowedToolTip" = "Default Value: False\nDescription: Permits write access to UEFI runtime services code. Use RebuildAppleMemoryMap if possible.";
 
 /* Class = "NSButtonCell"; title = "DisableVariableWrite"; ObjectID = "Tct-0T-oa0"; */
 "Tct-0T-oa0.title" = "DisableVariableWrite";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Default Value: false\nDescription: Enables writing to flash memory for all OpenCore-managed NVRAM system variables.\n\nNote: This value should be disabled on most types of firmware but is left configurable to account for firmware that may have issues with volatile variable storage overflows or similar. Boot issues across multiple OSes can be observed on e.g. Lenovo Thinkpad T430 and T530 without this quirk. Apple variables related to Secure Boot and hibernation are exempt from this for security reasons. Furthermore, some OpenCore variables are exempt for different reasons, such as the boot log due to an available user option, and the TSC frequency due to timing issues. When toggling this option, a NVRAM reset may be required to ensure full functionality."; ObjectID = "Uor-v0-mGa"; */
+"Uor-v0-mGa.ibShadowedToolTip" = "Default Value: false\nDescription: Enables writing to flash memory for all OpenCore-managed NVRAM system variables.\n\nNote: This value should be disabled on most types of firmware but is left configurable to account for firmware that may have issues with volatile variable storage overflows or similar. Boot issues across multiple OSes can be observed on e.g. Lenovo Thinkpad T430 and T530 without this quirk. Apple variables related to Secure Boot and hibernation are exempt from this for security reasons. Furthermore, some OpenCore variables are exempt for different reasons, such as the boot log due to an available user option, and the TSC frequency due to timing issues. When toggling this option, a NVRAM reset may be required to ensure full functionality.";
 
 /* Class = "NSButtonCell"; title = "EnableSafeModeSlide"; ObjectID = "W3J-6N-sTe"; */
 "W3J-6N-sTe.title" = "EnableSafeModeSlide";
@@ -122,6 +134,9 @@
 /* Class = "NSButtonCell"; title = "ProvideCustomSlide"; ObjectID = "bZ2-Rn-Ibn"; */
 "bZ2-Rn-Ibn.title" = "ProvideCustomSlide";
 
+/* Class = "NSBox"; title = "MmioWhitelist"; ObjectID = "be4-09-HSt"; */
+"be4-09-HSt.title" = "MmioWhitelist";
+
 /* Class = "NSTableColumn"; headerCell.title = "Address*"; ObjectID = "ctD-8l-aXL"; */
 "ctD-8l-aXL.headerCell.title" = "Address*";
 
@@ -131,11 +146,14 @@
 /* Class = "NSButtonCell"; title = "ThirdPartyDrives"; ObjectID = "ibe-5x-fBs"; */
 "ibe-5x-fBs.title" = "ThirdPartyDrives";
 
-/* Class = "NSButtonCell"; title = "DisableRtcChecksum"; ObjectID = "kBK-Wk-gUG"; */
-"kBK-Wk-gUG.title" = "DisableRtcChecksum";
+/* Class = "NSTabViewItem"; label = "UEFI"; ObjectID = "jiE-ct-zPT"; */
+"jiE-ct-zPT.label" = "UEFI";
 
-/* Class = "NSTabViewItem"; label = "MmioWhitelist"; ObjectID = "ldJ-oO-4GL"; */
-"ldJ-oO-4GL.label" = "MmioWhitelist";
+/* Class = "NSTextField"; ibShadowedToolTip = "Type: plist integer\nFailsafe: -1\nDescription: Reduce GPU PCI BAR sizes for compatibility with macOS.\n\nThis quirk reduces GPU PCI BAR sizes for Apple macOS up to the specified value or lower if it is unsupported. The specified value follows PCI Resizable BAR spec. While Apple macOS supports a theoretical 1 GB maximum, in practice all non-default values may not work correctly. For this reason the only supported value for this quirk is the minimal supported BAR size, i.e. 0. Use -1 to disable this quirk.\n\nFor development purposes one may take risks and try other values. Consider a GPU with 2 BARs:\n• BAR0 supports sizes from 256 MB to 8 GB. Its value is 4 GB.\n• BAR1 supports sizes from 2 MB to 256 MB. Its value is 256 MB.\n\nExample 1: Setting ResizeAppleGpuBars to 1 GB will change BAR0 to 1 GB and leave BAR1 unchanged.\nExample 2: Setting ResizeAppleGpuBars to 1 MB will change BAR0 to 256 MB and BAR0 to 2 MB.\nExample 3: Setting ResizeAppleGpuBars to 16 GB will make no changes.\n\nNote: See ResizeGpuBars quirk for general GPU PCI BAR size configuration and more details about the technology."; ObjectID = "lLJ-FK-hoB"; */
+"lLJ-FK-hoB.ibShadowedToolTip" = "Type: plist integer\nFailsafe: -1\nDescription: Reduce GPU PCI BAR sizes for compatibility with macOS.\n\nThis quirk reduces GPU PCI BAR sizes for Apple macOS up to the specified value or lower if it is unsupported. The specified value follows PCI Resizable BAR spec. While Apple macOS supports a theoretical 1 GB maximum, in practice all non-default values may not work correctly. For this reason the only supported value for this quirk is the minimal supported BAR size, i.e. 0. Use -1 to disable this quirk.\n\nFor development purposes one may take risks and try other values. Consider a GPU with 2 BARs:\n• BAR0 supports sizes from 256 MB to 8 GB. Its value is 4 GB.\n• BAR1 supports sizes from 2 MB to 256 MB. Its value is 256 MB.\n\nExample 1: Setting ResizeAppleGpuBars to 1 GB will change BAR0 to 1 GB and leave BAR1 unchanged.\nExample 2: Setting ResizeAppleGpuBars to 1 MB will change BAR0 to 256 MB and BAR0 to 2 MB.\nExample 3: Setting ResizeAppleGpuBars to 16 GB will make no changes.\n\nNote: See ResizeGpuBars quirk for general GPU PCI BAR size configuration and more details about the technology.";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Type: plist integer\nFailsafe: 0\nDescription: Attempts to perform TSC synchronisation with a specified timeout.\n\nThe primary purpose of this quirk is to enable early bootstrap TSC synchronisation on some server and laptop models when running a debug XNU kernel. For the debug kernel the TSC needs to be kept in sync across the cores before any kext could kick in rendering all other solutions problematic. The timeout is specified in microseconds and depends on the amount of cores present on the platform, the recommended starting value is 500000.\n\nThis is an experimental quirk, which should only be used for the aforementioned problem. In all other cases, the quirk may render the operating system unstable and is not recommended. The recommended solution in the other cases is to install a kernel extension such as VoodooTSCSync, TSCAdjustReset, or CpuTscSync (a more specialised variant of VoodooTSCSync for newer laptops).\n\nNote: This quirk cannot replace the kernel extension because it cannot operate in ACPI S3 (sleep wake) mode and because the UEFI firmware only provides very limited multicore support which prevents precise updates of the MSR registers."; ObjectID = "mVh-iv-wqG"; */
+"mVh-iv-wqG.ibShadowedToolTip" = "Type: plist integer\nFailsafe: 0\nDescription: Attempts to perform TSC synchronisation with a specified timeout.\n\nThe primary purpose of this quirk is to enable early bootstrap TSC synchronisation on some server and laptop models when running a debug XNU kernel. For the debug kernel the TSC needs to be kept in sync across the cores before any kext could kick in rendering all other solutions problematic. The timeout is specified in microseconds and depends on the amount of cores present on the platform, the recommended starting value is 500000.\n\nThis is an experimental quirk, which should only be used for the aforementioned problem. In all other cases, the quirk may render the operating system unstable and is not recommended. The recommended solution in the other cases is to install a kernel extension such as VoodooTSCSync, TSCAdjustReset, or CpuTscSync (a more specialised variant of VoodooTSCSync for newer laptops).\n\nNote: This quirk cannot replace the kernel extension because it cannot operate in ACPI S3 (sleep wake) mode and because the UEFI firmware only provides very limited multicore support which prevents precise updates of the MSR registers.";
 
 /* Class = "NSButtonCell"; title = "PowerTimeoutKernelPanic"; ObjectID = "mtQ-xf-bHv"; */
 "mtQ-xf-bHv.title" = "PowerTimeoutKernelPanic";
@@ -176,11 +194,17 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nRequirement: 10.11 (not required for older)\nDescription: Patch various kexts (AppleUSBXHCI.kext, AppleUSBXHCIPCI.kext, IOUSBHostFamily.kext) to remove USB port count limit of 15 ports.\nNote: This option should avoided whenever possible. USB port limit is imposed by the amount of used bits in locationID format and there is no possible way to workaround this without heavy OS modification. The only valid solution is to limit the amount of used ports to 15 (discarding some)."; ObjectID = "sun-oo-HP0"; */
 "sun-oo-HP0.ibShadowedToolTip" = "Default Value: True\nRequirement: 10.11 (not required for older)\nDescription: Patch various kexts (AppleUSBXHCI.kext, AppleUSBXHCIPCI.kext, IOUSBHostFamily.kext) to remove USB port count limit of 15 ports.\nNote: This option should avoided whenever possible. USB port limit is imposed by the amount of used bits in locationID format and there is no possible way to workaround this without heavy OS modification. The only valid solution is to limit the amount of used ports to 15 (discarding some).";
 
+/* Class = "NSButtonCell"; title = "ProvideCurrentCpuInfo"; ObjectID = "tDZ-O0-G5U"; */
+"tDZ-O0-G5U.title" = "ProvideCurrentCpuInfo";
+
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nRequirement: 10.6 (not required for older)\nDescription: Apply vendor patches to IOAHCIBlockStorage.kext to enable native features for third-party drives, such as TRIM on SSDs or hibernation support on 10.15 and newer.\nNote: This option may be avoided on user preference. NVMe SSDs are compatible without the change. For AHCI SSDs on modern macOS version there is a dedicated built-in utility called trimforce. Starting from 10.15 this utility creates EnableTRIM variable in APPLE_BOOT_VARIABLE_GUID namespace with 01 00 00 00 value."; ObjectID = "tJF-zk-Mgd"; */
 "tJF-zk-Mgd.ibShadowedToolTip" = "Default Value: False\nRequirement: 10.6 (not required for older)\nDescription: Apply vendor patches to IOAHCIBlockStorage.kext to enable native features for third-party drives, such as TRIM on SSDs or hibernation support on 10.15 and newer.\nNote: This option may be avoided on user preference. NVMe SSDs are compatible without the change. For AHCI SSDs on modern macOS version there is a dedicated built-in utility called trimforce. Starting from 10.15 this utility creates EnableTRIM variable in APPLE_BOOT_VARIABLE_GUID namespace with 01 00 00 00 value.";
 
 /* Class = "NSTextFieldCell"; title = "KernelCache"; ObjectID = "tzk-nw-rw9"; */
 "tzk-nw-rw9.title" = "KernelCache";
+
+/* Class = "NSTextFieldCell"; title = "TscSyncTimeout"; ObjectID = "vB1-tq-xGe"; */
+"vB1-tq-xGe.title" = "TscSyncTimeout";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: False\nDescription: A security option to ignore single user mode arguments."; ObjectID = "vYQ-4C-eVz"; */
 "vYQ-4C-eVz.ibShadowedToolTip" = "Default Value: False\nDescription: A security option to ignore single user mode arguments.";
@@ -196,6 +220,9 @@
 
 /* Class = "NSButton"; ibShadowedToolTip = "Default Value: True\nDescription: Generate Memory Map compatible with macOS."; ObjectID = "wVb-7V-a4H"; */
 "wVb-7V-a4H.ibShadowedToolTip" = "Default Value: True\nDescription: Generate Memory Map compatible with macOS.";
+
+/* Class = "NSTextFieldCell"; title = "Emulate"; ObjectID = "yzD-lo-y3Q"; */
+"yzD-lo-y3Q.title" = "Emulate";
 
 /* Class = "NSButtonCell"; title = "FuzzyMatch"; ObjectID = "zTF-In-q11"; */
 "zTF-In-q11.title" = "FuzzyMatch";

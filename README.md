@@ -7,10 +7,10 @@ Hardware:
 * ALC283 Audio card
 * Realtek RTL8111 Ethernet card
 * Realtek RTL8411B Card Reader
-* WIFI and Bluetooth AC7260 (I upgraded WIFI card)
+* WIFI and Bluetooth BCM94352HMB (I upgraded the WIFI card)
 * Webcam USB internal
 
-Almost everything works, including the hardware listed above, sleep, volume and brightness adjustment keys, except for:
+Almost everything works, including the hardware listed above, sleep, volume, AirDrop and brightness adjustment keys, except for:
 * Sound through HDMI (video works)
 * hibernation 
 * Sleep only works when closing lid. 
